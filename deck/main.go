@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //import "fmt"
 
 func main() {
@@ -11,10 +9,13 @@ func main() {
 	d.shuffle1()
 	// fmt.Println("###############")
 	d.print()
-	fmt.Println("###############")
+	//fmt.Println("###############")
 	d.shuffle2()
-	d.print()
-	fmt.Println("###############")
+	//d.print()
+	//fmt.Println("###############")
 	d.shuffle3()
-	d.print()
+	//d.print()
+	d.saveToFile()
+	d.appendToFile()
+	d.readFromFile()
 }
