@@ -8,7 +8,7 @@ func main() {
 	// d.print()
 	d.shuffle1()
 	// fmt.Println("###############")
-	d.print()
+	// d.print()
 	//fmt.Println("###############")
 	d.shuffle2()
 	//d.print()

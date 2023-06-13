@@ -88,4 +88,5 @@ func (d deck) readFromFile() {
 		log.Fatal(err)
 	}
 	os.Stdout.Write(data)
+	fmt.Printf("Print using Printf: %v\n", string(data))
 }
