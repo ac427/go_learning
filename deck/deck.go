@@ -26,9 +26,14 @@ func newDeck() deck {
 }
 
 func (d deck) print() {
+	fmt.Println("Printing cards:")
 	for i, value := range d {
 		fmt.Println(i, value)
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
 
 func (d deck) shuffle1() {
@@ -59,9 +64,9 @@ func (d deck) shuffle3() {
 	}
 }
 
-func (d deck) saveToFile() {
+func (d deck) saveToFile(f string) {
 	message := []byte(strings.Join(d, "\n"))
-	err := os.WriteFile("deck.txt", message, 0644)
+	err := os.WriteFile(f, message, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
